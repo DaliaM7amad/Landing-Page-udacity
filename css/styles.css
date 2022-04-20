@@ -70,8 +70,10 @@ section {
     text-align: right;
 }
 
+
+/*edited for responsive design */
 .navbar__menu li {
-    display: inline-block;
+    display: block;
 }
 
 .navbar__menu .menu__link {
@@ -88,6 +90,12 @@ section {
     transition: ease 0.3s all;
 }
 
+/* added to highlight the nav menu links */
+.active-a{
+    color: #cc1 !important;
+    background-color: rgb(84, 84, 84);
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -96,6 +104,8 @@ section {
     width: 100%;
     z-index: 5;
 }
+
+
 
 /* Footer Styles */
 .page__footer {
@@ -120,6 +130,10 @@ section {
     .landing__container {
         max-width: 50em;
         padding: 4em;
+    }
+    /*added for responsive design */
+    .navbar__menu li {
+        display: inline-block;
     }
 }
 
@@ -198,9 +212,11 @@ section.your-active-class {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
+/* added to get a more specific view of the active section */
 .your-active-class h2{
     color: #cc1;
 }
+
 
 section.your-active-class .landing__container::before {
     opacity: 1;
@@ -212,9 +228,6 @@ section.your-active-class .landing__container::after {
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
-.active-menu-link{
-    color: #cc1;
-}
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {

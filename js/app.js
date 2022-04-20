@@ -1,12 +1,12 @@
 // Build menu 
 document.addEventListener('DOMContentLoaded', createNavMenu);
 const sections = document.getElementsByTagName('section');
+const myUl = document.querySelector('ul');
 
 // this function create li menu elements then append them to the ul of the navbar
 function createNavMenu(){
 
     const fragment = document.createDocumentFragment(); 
-    const myUl = document.querySelector('ul');
 
     for (const section of sections) {
         const liItem = document.createElement('li');
@@ -17,21 +17,25 @@ function createNavMenu(){
 }
 
 
-// Add class 'active' to section when near top of viewport
+// Add class 'active' to section and link when near top of viewport 
 
 document.addEventListener('scroll', activeSection);
 
 function activeSection(){
     for (const section of sections) {
+        const link = document.querySelector(`a[href = "#${section.id}"]`);
         if(section.getBoundingClientRect().top >= 0 && section.getBoundingClientRect().top <= 400)
         {
             section.classList.add('your-active-class');
+            link.classList.add('active-a');
         }
         else
         {
             section.classList.remove('your-active-class');
+            link.classList.remove('active-a');
         }
     }
 }
+
 
 
