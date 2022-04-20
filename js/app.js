@@ -1,64 +1,9 @@
-/**
- * 
- * Manipulating the DOM exercise.
- * Exercise programmatically builds navigation,
- * scrolls to anchors from navigation,
- * and highlights section in viewport upon scrolling.
- * 
- * Dependencies: None
- * 
- * JS Version: ES2015/ES6
- * 
- * JS Standard: ESlint
- * 
-*/
-
-/**
- * Comments should be present at the beginning of each procedure and class.
- * Great to have comments before crucial code sections within the procedure.
-*/
-
-/**
- * Define Global Variables
- * 
-*/
-
-
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
 // Build menu 
 document.addEventListener('DOMContentLoaded', createNavMenu);
 const sections = document.getElementsByTagName('section');
 
 // this function create li menu elements then append them to the ul of the navbar
-function createNavMenu(event){
+function createNavMenu(){
 
     const fragment = document.createDocumentFragment(); 
     const myUl = document.querySelector('ul');
@@ -71,5 +16,22 @@ function createNavMenu(event){
     myUl.appendChild(fragment);
 }
 
+
+// Add class 'active' to section when near top of viewport
+
+document.addEventListener('scroll', activeSection);
+
+function activeSection(){
+    for (const section of sections) {
+        if(section.getBoundingClientRect().top >= 0 && section.getBoundingClientRect().top <= 400)
+        {
+            section.classList.add('your-active-class');
+        }
+        else
+        {
+            section.classList.remove('your-active-class');
+        }
+    }
+}
 
 
