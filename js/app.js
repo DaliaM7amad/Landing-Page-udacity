@@ -23,6 +23,7 @@ document.addEventListener('scroll', activeSection);
 
 function activeSection(){
     for (const section of sections) {
+        // store the link to add active class
         const link = document.querySelector(`a[href = "#${section.id}"]`);
         if(section.getBoundingClientRect().top >= 0 && section.getBoundingClientRect().top <= 400)
         {
@@ -32,10 +33,23 @@ function activeSection(){
         else
         {
             section.classList.remove('your-active-class');
-            link.classList.remove('active-a');
+            link.className.search('active-a') === -1 ? null : link.classList.remove('active-a') ;
         }
     }
 }
+
+// smooth scroll
+
+//using delegation to avoid multiple events
+
+myUl.addEventListener('click', function(event){
+    event.preventDefault();
+    const clickedSectionId = event.target.getAttribute('href').substring(1);
+    const clickedSection = document.getElementById(clickedSectionId);
+    clickedSection.scrollIntoView({behavior:"smooth", block:"center"});
+});
+
+
 
 
 
