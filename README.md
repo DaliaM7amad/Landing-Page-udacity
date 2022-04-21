@@ -3,6 +3,12 @@
 ## Table of Contents
 
 * [Instructions](#instructions)
+* [Usage](#Usage)
+* [Author](#Author)
+* [Description](#Description)
+* [Features](#Features)
+* [Technologies](#Technologies)
+
 
 ## Usage
 All features can be seen by downloading the project and clicking on the index.html file.
