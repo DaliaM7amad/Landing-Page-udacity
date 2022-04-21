@@ -2,7 +2,6 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
 * [Usage](#Usage)
 * [Author](#Author)
 * [Description](#Description)
