@@ -4,10 +4,27 @@
 
 * [Instructions](#instructions)
 
-## Instructions
+## Usage
+All features can be seen by downloading the project and clicking on the index.html file.
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Author
+Dalia Mohamed, Udacity.
 
-To get started, open `js/app.js` and start building out the app's functionality
+## Description
+Responsive landing page project.
 
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+## Features
+- A Fully responsive layout of the landing page.
+- Navigation menu is built dynamically.
+- The active section in the Navbar is being highlighted.
+- It is clear which section is being viewed while scrolling through the page.
+- A smooth scrolling behavior.
+
+## Technologies 
+- Virtual DOM using createDocumentFragment() method for better controlling reflow and repaint actions.
+- appendChild() method.
+- viewport using .getBoundingClientRect() method.
+- Stop occurrence of default events preventDefault() method.
+- scroll event and scrollIntoView() method for smooth scroll behavior.
+
+
