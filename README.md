@@ -13,7 +13,7 @@
 All features can be seen by downloading the project and clicking on the index.html file.
 
 ## Author
-Dalia Mohamed, Udacity.
+Dalia Mohamed.
 
 ## Description
 Responsive landing page project.
